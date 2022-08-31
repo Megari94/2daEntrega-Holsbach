@@ -24,35 +24,35 @@ let lunes = new Horarios(
   "Lunes",
   "Dr. Lautaro Gimenez",
   "Clinico",
-  "Prepaga: SI",
+  "SI",
   "https://img.freepik.com/foto-gratis/doctor-brazos-cruzados-sobre-fondo-blanco_1368-5790.jpg?w=2000"
 );
 let martes = new Horarios(
   "Martes",
   "Lic. Agustín Palacios",
   "Nutricionista",
-  "Prepaga: NO",
+  "NO",
   "https://bosworthinstitute.com/wp-content/uploads/2020/07/Nutricionista-bosworth-carrera.png"
 );
 let martes2 = new Horarios(
   "Martes",
   "Lic. Maria Cordoba",
   "Nutricionista",
-  "Prepaga: NO",
+  "NO",
   "https://nutricionistahuelva.es/ficheros/servicios/psiconutricion_C_4.jpg"
 );
 let mier = new Horarios(
   "Miercoles",
   "Dra. Rocio Matozo",
   "Pediatra",
-  "Prepaga: SI",
+  "SI",
   "https://ximenamargain.com/wp-content/uploads/2021/07/DOCTORA-XIMENA-LINKS-PEDIATRA.jpg"
 );
 let vier = new Horarios(
   "Viernes",
   "Dr. Gregorio Muñoz",
   "Cardiologia",
-  "Prepaga: NO",
+  "NO",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8a-31MUy64qk80BIpp8cpv8q273vQFMIkXBdWmnNU96bXD1fKfG5vYW82Nf-kRMq1VM&usqp=CAU"
 );
 
@@ -146,7 +146,7 @@ arrayClinico.forEach((clinic) => {
             
                <h3>${clinic.nombre}</h3>                       
                <p class="card-text">${clinic.especialidad}</p>
-               <p class="card-text">${clinic.prepaga}</p>
+               <p class="card-text">Prepaga: ${clinic.prepaga}</p>
               
              </div>
              </div>
@@ -155,19 +155,36 @@ arrayClinico.forEach((clinic) => {
 
 //PERSONAL QUE TRABAJE CON OBRA SOCIAL
 
-let prep = dr.filter((Horarios) => Horarios.prepaga == "SI");
-const prepaga = document.getElementById("noticias");
-const arrayPrepaga = [];
-arrayPrepaga.push(prep);
+let prep = dr.filter((Horarios) => Horarios.prepaga == "SI" ) ; 
 
-arrayPrepaga.forEach((pre) => {
-  prepaga.innerHTML += `<div class = "personal-pre"><p>Personal con Prepaga Actual:</p>
+const prepaga = document.getElementById("noticias");
+
+prep.forEach((pre) => {
+    
+  prepaga.innerHTML += `
+  <p div class = "personal-pre1">Personal con Prepaga Actual:</p> 
+  <div class = "personal-pre">
             
-       <h3>${pre.nombre}</h3>                       
-       <p class="card-text">${pre.especialidad}</p>
-       <p class="card-text">${pre.prepaga}</p>
+    <div class="card" style="width: 13rem;" align="center">
+        <h3 class="title" align="center">${pre.nombre}</h3>
+  
+        <div class="card-body">            
+    
+    
+            <p class="card-text">${pre.especialidad}</p>
+    
+   
+    </div>
+       
       
-     </div>
-     </div>
+  </div>
+     
          `;
 });
+
+
+
+
+
+        /*   <h3 class="h3-nom">${pre.nombre}</h3>                       
+       <p class="card-text1">${pre.especialidad}</p> */

@@ -3,10 +3,14 @@
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
+body{
+    width: 100vw;
+    border: 1px solid red;
+}
 /*ESTO ES LA BARRA DE NAVEGACION*/
 .navbar {
   width: 100%;
-  margin: auto;
+  margin: 0;
   padding: 10px;
   background-color: #126491;
 
@@ -16,7 +20,7 @@
 
 .navbar:hover {
   width: 100%;
-  margin: auto;
+  margin:0;
   padding: 10px;
   background-color: #3689ad;
 
@@ -218,13 +222,14 @@ img {
 /*FORMULARIO DE REGISTRO*/
 
 .registro {
-  width: 100%;
+  width: 96vw;
   display: flex;
   justify-content: center;
   background: #126491;
   padding: 40px;
   margin-top: 100px;
   border-radius: 4px;
+  border: 1px solid red;
   font-family: "Open Sans", sans-serif;
   color: white;
   box-shadow: 7px 13px 37px #a7c6d7;
@@ -340,7 +345,7 @@ h3 {
   left: 70%;
 }
 
-.personal-pre {
+.personal-pre1 { 
   color: whitesmoke;
   text-align: center;
   font-size: 30px;
@@ -348,6 +353,15 @@ h3 {
   top: 385%; /*ESTA ES LA SOLUCION QUE ENCONTRE EN MI PANTALLA, PARA QUE QUEDE CENTRADA, PERO NI BIEN LA CAMBIO DE PANTALLA SE DEFORMA*/
   left: 70%;
 }
+
+.personal-pre{
+    display: inline-block;
+    margin-right: 100px; 
+     
+     
+}
+
+
 
 /*PIE DE PAGINA*/
 
