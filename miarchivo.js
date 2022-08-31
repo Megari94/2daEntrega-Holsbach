@@ -186,5 +186,4 @@ prep.forEach((pre) => {
 
 
 
-        /*   <h3 class="h3-nom">${pre.nombre}</h3>                       
-       <p class="card-text1">${pre.especialidad}</p> */
+  
